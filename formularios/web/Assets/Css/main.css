@@ -7,4 +7,14 @@ and open the template in the editor.
     Created on : 13-mar-2019, 2:27:08
     Author     : Eduardo
 */
-*,body{margin: 0px; padding: 0px;}
+
+h1{
+    color: red;
+}
+.cabezera{
+    background: aqua;
+    /* Box size*/
+    width:  100%;
+    height: 100px;
+}
+.hoola{}
