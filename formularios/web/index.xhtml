@@ -6,16 +6,27 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core">
     <h:head>   
         <title>Cedula de indentificacion del niño</title>
-        <h:outputStylesheet library="css" name="Assets/Css/main.css"  />
+        
         <style>
             @import url('https://fonts.googleapis.com/css?family=Open+Sans');
             *,body{ margin: 0px; padding: 0px; font-family: 'Open Sans', sans-serif; }
             .titulo{  width: 100%; height: 85px;} 
             .titulo >h1{ color: #666666; font-size: 28px; padding-top: 20px;}
             .ui-panelgrid td, .ui-panelgrid tr{ border-style: none !important;}
+            .inpDate{ padding-left: 10px; margin-left: 10px;}
+            .form1 { width: 880px;}
         </style>
     </h:head>
     <h:body style="background: #f5f5f5;">
+
+        <div style="position: fixed; margin-left: 30px; margin-top: 600px; width: 100%;">
+
+            <p:commandButton value="Atras" style="background: #00cccc; color: white; "/>
+
+            <p:commandButton value="Guardar" style="background: #009999; color: white; float: right; margin-right: 60px; "/>
+
+        </div>
+
         <center>
             <div style="width: 100%; height: 10px; background:#8d8d8d; "></div>
             <div class="titulo">
@@ -23,11 +34,13 @@
             </div>
 
 
-            <h:form>
+
+
+            <h:form style=" ">
                 <!-- Inicio -->
                 <p:panelGrid style="-webkit-box-shadow: 10px 10px 30px -19px rgba(0,0,0,0.75);
-                                    -moz-box-shadow: 10px 10px 30px -19px rgba(0,0,0,0.75);
-                                    box-shadow: 10px 10px 30px -19px rgba(0,0,0,0.75);">
+                             -moz-box-shadow: 10px 10px 30px -19px rgba(0,0,0,0.75);
+                             box-shadow: 10px 10px 30px -19px rgba(0,0,0,0.75);">
                     <p:row>
                         <p:column colspan="2">
                             <p:outputLabel value=""/>
@@ -111,19 +124,19 @@
                             <p:inputText id="input"/>
                         </p:column>
                     </p:row>
-                    
-                      <p:row style="height: 10px;">
+
+                    <p:row style="height: 10px;">
                         <p:column colspan="2">
                             <p:outputLabel value=""/>
                         </p:column>
                         <p:column colspan="2">
-                            
+
                         </p:column>
                         <p:column colspan="2">
-                           
+
                         </p:column>
                         <p:column colspan="2">
-                            
+
                         </p:column>
                     </p:row>
                     <p:row style="background: #009999;">
@@ -131,20 +144,540 @@
                             <p:outputLabel value=""/>
                         </p:column>
                         <p:column colspan="2">
-                            
+
                         </p:column>
                         <p:column colspan="2">
-                           
+
                         </p:column>
                         <p:column colspan="2">
-                            
+
                         </p:column>
                     </p:row>
 
                 </p:panelGrid>
                 <!-- Fin -->
+                <div style="width: 100%; height: 50px;">
+
+                </div>
+                <p:panelGrid class="form1" style="-webkit-box-shadow: 10px 10px 30px -19px rgba(0,0,0,0.75);
+                             -moz-box-shadow: 10px 10px 30px -19px rgba(0,0,0,0.75);
+                             box-shadow: 10px 10px 30px -19px rgba(0,0,0,0.75);">
+
+                    <p:row>
+                        <p:column colspan="1" style="background:#009999; color: white; font-size: 22px;">
+                            <p:outputLabel value="Niño"/>
+                        </p:column>
+
+                    </p:row>
+
+                    <p:row>
+                        <p:column >
+                            <p:outputLabel style="margin-left: 30px;" value="Nombre  :  "/>
+                            <p:inputText class="inpDate" placeholder=" Nombres" />
+
+                            <p:inputText class="inpDate"  placeholder="Apellido Materno" />
+
+                            <p:inputText class="inpDate" placeholder="Apellido Paterno" />
+                        </p:column>
+                    </p:row>
+
+                    <p:row>
+                        <p:column colspan="2" >
+                            <p:outputLabel style="margin-left: 60px;" value="Fecha de Nacimiento  :  "/>
+                            <p:calendar />
 
 
+
+                            <p:outputLabel style="margin-left: 10px;" value="Edad  :  "/>
+                            <p:inputNumber />
+
+                        </p:column>
+                    </p:row>
+                    <p:row>
+                        <p:column colspan="2" >
+                            <p:outputLabel style="margin-left: 120px;" value="curp :  "/>
+
+                            <p:inputText  style="width: 500px;" />
+
+                        </p:column>
+                    </p:row>
+                    <p:row style="height: 20px;">
+                        <p:column colspan="2">
+                            <p:outputLabel value=""/>
+                        </p:column>
+
+
+                    </p:row>
+                </p:panelGrid>
+
+                <div style="width: 100%; height: 50px;">
+
+                </div>
+                <p:panelGrid class="form1" style="-webkit-box-shadow: 10px 10px 30px -19px rgba(0,0,0,0.75);
+                             -moz-box-shadow: 10px 10px 30px -19px rgba(0,0,0,0.75);
+                             box-shadow: 10px 10px 30px -19px rgba(0,0,0,0.75);">
+
+                    <p:row>
+                        <p:column colspan="1" style="background: #009999; color: white; font-size: 22px;">
+                            <p:outputLabel value="Beneficiario"/>
+                        </p:column>
+
+                    </p:row>
+
+                    <p:row>
+                        <p:column>
+                            <p:outputLabel style="margin-left: 30px;" value="Nombre  :  "/>
+                            <p:inputText class="inpDate" placeholder=" Nombres" />
+
+                            <p:inputText class="inpDate"  placeholder="Apellido Materno" />
+
+                            <p:inputText class="inpDate" placeholder="Apellido Paterno" />
+                        </p:column>
+                    </p:row>
+
+
+                    <p:row>
+                        <p:column colspan="2" >
+                            <p:outputLabel style="margin-left: 100px;" value="curp :  "/>
+
+                            <p:inputText  style="width: 500px;" />
+
+                        </p:column>
+                    </p:row>
+
+                    <p:row>
+                        <p:column>
+                            <p:outputLabel style="margin-left: 70px;" value="Domicilio :"/>
+                            <p:inputText class="inpDate" placeholder="colonia"/>
+                            <p:inputText class="inpDate" placeholder="calle"/>
+                            <p:inputText class="inpDate" style="width: 100px;" placeholder="numero"/>
+                        </p:column>
+                    </p:row>
+                    <p:row>
+                        <p:column>
+                            <p:outputLabel style="margin-left: 50px;" value="Telefono Cel "/>
+                            <p:inputNumber class="inpDate" placeholder="000-0000-0000"/>
+                            <p:outputLabel class="inpDate" value="Telefono Local "/>
+                            <p:inputNumber class="inpDate" placeholder="000-0000-0000"/>
+                        </p:column>
+                    </p:row>
+                    
+                  
+                    <p:row>
+                        <p:column style="height: 10px;">
+                            <p:outputLabel value=" "/>
+                        </p:column>
+                    </p:row>
+                    <p:row style="height: 0.5px; background: #009999; width: 100%;">
+                        <p:column>
+                            <p:outputLabel value=" "/>
+                        </p:column>
+                    </p:row>
+                    <p:row>
+                        <p:column>
+                            <p:outputLabel value="Datos del Trabajo"/>
+                        </p:column>
+                    </p:row>
+                    <p:row>
+                        <p:column style="height: 10px;">
+                            <p:outputLabel value=" "/>
+                        </p:column>
+                    </p:row>
+
+                    <p:row>
+                        <p:column>
+                            <p:outputLabel value="Nombre de la empresa :" />
+                            <p:inputText />
+                            <p:outputLabel class="inpDate"  value="Telefono de la empresa:"/>
+                            <p:inputNumber  placeholder="000-0000-0000"/>
+                        </p:column>
+
+                    </p:row>
+                    <p:row>
+                        <p:column>
+                            <div style="margin: auto;">
+                                <p:outputLabel value="Domicilio de la empresa :" />
+                                <p:inputText class="inpDate" placeholder="Colonia" />
+                                <p:inputText class="inpDate" placeholder="Calle" />
+                                <p:inputText class="inpDate" placeholder="Numero" style="width: 100px;" />
+                            </div>
+                        </p:column>
+
+                    </p:row>
+                    <p:row>
+                        <p:column>
+                            <p:outputLabel style="margin-left: 60px;" value="Horario de Trabajo : "/>
+                            <p:inputText class="inpDate" placeholder="Hora entrada"/>
+                            <p:inputText class="inpDate" placeholder="Hora salida"/>
+                        </p:column>
+                    </p:row>
+
+                    <p:row style="height: 20px;">
+                        <p:column colspan="2">
+                            <p:outputLabel value=""/>
+                        </p:column>
+
+
+                    </p:row>
+                </p:panelGrid>
+
+                <div style="width: 100%; height: 50px;">
+
+                </div>
+
+                <p:panelGrid class="form1" style="-webkit-box-shadow: 10px 10px 30px -19px rgba(0,0,0,0.75);
+                             -moz-box-shadow: 10px 10px 30px -19px rgba(0,0,0,0.75);
+                             box-shadow: 10px 10px 30px -19px rgba(0,0,0,0.75);">
+
+                    <p:row>
+                        <p:column colspan="1" style="background: #009999; color: white; font-size: 22px;">
+                            <p:outputLabel value="Persona Autorizada #1"/>
+                        </p:column>
+
+                    </p:row>
+
+                    <p:row>
+                        <p:column >
+                            <p:outputLabel style="margin-left: 30px;" value="Nombre  :  "/>
+                            <p:inputText class="inpDate" placeholder=" Nombres" />
+
+                            <p:inputText class="inpDate"  placeholder="Apellido Materno" />
+
+                            <p:inputText class="inpDate" placeholder="Apellido Paterno" />
+                        </p:column>
+                    </p:row>
+
+
+                    <p:row>
+                        <p:column colspan="2" >
+                            <p:outputLabel style="margin-left: 100px;" value="curp :  "/>
+
+                            <p:inputText  style="width: 500px;" />
+
+                        </p:column>
+                    </p:row>
+
+                    <p:row>
+                        <p:column>
+                            <p:outputLabel style="margin-left: 70px;" value="Domicilio :"/>
+                            <p:inputText class="inpDate" placeholder="colonia"/>
+                            <p:inputText class="inpDate" placeholder="calle"/>
+                            <p:inputText class="inpDate" style="width: 100px;" placeholder="numero"/>
+                        </p:column>
+                    </p:row>
+                    <p:row>
+                        <p:column>
+                            <p:outputLabel style="margin-left: 50px;" value="Telefono Cel "/>
+                            <p:inputNumber class="inpDate" placeholder="000-0000-0000"/>
+                            <p:outputLabel class="inpDate" value="Telefono trabajo "/>
+                            <p:inputNumber class="inpDate" placeholder="000-0000-0000"/>
+                        </p:column>
+                    </p:row>
+                    
+                    <p:row style="height: 25px;">
+                        <p:column>
+                            <p:outputLabel value=""/>
+                        </p:column>
+                    </p:row>
+
+                      <p:row>
+                        <p:column>
+                            <p:outputLabel style="margin-left: 120px; font-size: 21px;" value="Firma" />
+                        </p:column>
+                    </p:row>
+                    <p:row>
+                        <p:column>
+                   
+                            
+                                
+                                
+
+                                <p:signature  style="width:330px;height:140px; margin-left: 250px;"  value=""  />
+
+                                
+
+                                
+                           
+                          
+                        </p:column>
+                         
+                    </p:row>
+
+
+                    <p:row style="height: 20px;">
+                        <p:column colspan="2">
+                            <p:outputLabel value=""/>
+                        </p:column>
+
+
+                    </p:row>
+                </p:panelGrid>
+                
+                <div style="width: 100%; height: 50px;">
+
+                </div>
+
+                <p:panelGrid class="form1" style="-webkit-box-shadow: 10px 10px 30px -19px rgba(0,0,0,0.75);
+                             -moz-box-shadow: 10px 10px 30px -19px rgba(0,0,0,0.75);
+                             box-shadow: 10px 10px 30px -19px rgba(0,0,0,0.75);">
+
+                    <p:row>
+                        <p:column colspan="1" style="background: #009999; color: white; font-size: 22px;">
+                            <p:outputLabel value="Persona Autorizada #2"/>
+                        </p:column>
+
+                    </p:row>
+
+                    <p:row>
+                        <p:column >
+                            <p:outputLabel style="margin-left: 30px;" value="Nombre  :  "/>
+                            <p:inputText class="inpDate" placeholder=" Nombres" />
+
+                            <p:inputText class="inpDate"  placeholder="Apellido Materno" />
+
+                            <p:inputText class="inpDate" placeholder="Apellido Paterno" />
+                        </p:column>
+                    </p:row>
+
+
+                    <p:row>
+                        <p:column colspan="2" >
+                            <p:outputLabel style="margin-left: 100px;" value="curp :  "/>
+
+                            <p:inputText  style="width: 500px;" />
+
+                        </p:column>
+                    </p:row>
+
+                    <p:row>
+                        <p:column>
+                            <p:outputLabel style="margin-left: 70px;" value="Domicilio :"/>
+                            <p:inputText class="inpDate" placeholder="colonia"/>
+                            <p:inputText class="inpDate" placeholder="calle"/>
+                            <p:inputText class="inpDate" style="width: 100px;" placeholder="numero"/>
+                        </p:column>
+                    </p:row>
+                    <p:row>
+                        <p:column>
+                            <p:outputLabel style="margin-left: 50px;" value="Telefono Cel "/>
+                            <p:inputNumber class="inpDate" placeholder="000-0000-0000"/>
+                            <p:outputLabel class="inpDate" value="Telefono trabajo "/>
+                            <p:inputNumber class="inpDate" placeholder="000-0000-0000"/>
+                        </p:column>
+                    </p:row>
+                    
+                    <p:row style="height: 25px;">
+                        <p:column>
+                            <p:outputLabel value=""/>
+                        </p:column>
+                    </p:row>
+
+                      <p:row>
+                        <p:column>
+                            <p:outputLabel style="margin-left: 120px; font-size: 21px;" value="Firma" />
+                        </p:column>
+                    </p:row>
+                    <p:row>
+                        <p:column>
+                   
+                            
+                                
+                                
+
+                                <p:signature  style="width:330px;height:140px; margin-left: 250px;"  value=""  />
+
+                                
+
+                                
+                           
+                          
+                        </p:column>
+                         
+                    </p:row>
+
+
+                    <p:row style="height: 20px;">
+                        <p:column colspan="2">
+                            <p:outputLabel value=""/>
+                        </p:column>
+
+
+                    </p:row>
+                </p:panelGrid>
+
+                <div style="width: 100%; height: 50px;">
+
+                </div>
+
+                <p:panelGrid class="form1" style="-webkit-box-shadow: 10px 10px 30px -19px rgba(0,0,0,0.75);
+                             -moz-box-shadow: 10px 10px 30px -19px rgba(0,0,0,0.75);
+                             box-shadow: 10px 10px 30px -19px rgba(0,0,0,0.75);">
+
+                    <p:row>
+                        <p:column colspan="1" style="background: #009999; color: white; font-size: 22px;">
+                            <p:outputLabel value="Persona Autorizada #3"/>
+                        </p:column>
+
+                    </p:row>
+
+                    <p:row>
+                        <p:column >
+                            <p:outputLabel style="margin-left: 30px;" value="Nombre  :  "/>
+                            <p:inputText class="inpDate" placeholder=" Nombres" />
+
+                            <p:inputText class="inpDate"  placeholder="Apellido Materno" />
+
+                            <p:inputText class="inpDate" placeholder="Apellido Paterno" />
+                        </p:column>
+                    </p:row>
+
+
+                    <p:row>
+                        <p:column colspan="2" >
+                            <p:outputLabel style="margin-left: 100px;" value="curp :  "/>
+
+                            <p:inputText  style="width: 500px;" />
+
+                        </p:column>
+                    </p:row>
+
+                    <p:row>
+                        <p:column>
+                            <p:outputLabel style="margin-left: 70px;" value="Domicilio :"/>
+                            <p:inputText class="inpDate" placeholder="colonia"/>
+                            <p:inputText class="inpDate" placeholder="calle"/>
+                            <p:inputText class="inpDate" style="width: 100px;" placeholder="numero"/>
+                        </p:column>
+                    </p:row>
+                    <p:row>
+                        <p:column>
+                            <p:outputLabel style="margin-left: 50px;" value="Telefono Cel "/>
+                            <p:inputNumber class="inpDate" placeholder="000-0000-0000"/>
+                            <p:outputLabel class="inpDate" value="Telefono trabajo "/>
+                            <p:inputNumber class="inpDate" placeholder="000-0000-0000"/>
+                        </p:column>
+                    </p:row>
+                    
+                    <p:row style="height: 25px;">
+                        <p:column>
+                            <p:outputLabel value=""/>
+                        </p:column>
+                    </p:row>
+
+                      <p:row>
+                        <p:column>
+                            <p:outputLabel style="margin-left: 120px; font-size: 21px;" value="Firma" />
+                        </p:column>
+                    </p:row>
+                    <p:row>
+                        <p:column>
+                   
+                            
+                                
+                                
+
+                                <p:signature  style="width:330px;height:140px; margin-left: 250px;"  value=""  />
+
+                                
+
+                                
+                           
+                          
+                        </p:column>
+                         
+                    </p:row>
+
+
+                    <p:row style="height: 20px;">
+                        <p:column colspan="2">
+                            <p:outputLabel value=""/>
+                        </p:column>
+
+
+                    </p:row>
+                </p:panelGrid>
+
+                
+                
+                <div style="width: 100%; height: 50px;">
+
+                </div>
+
+                <p:panelGrid class="form1" style="-webkit-box-shadow: 10px 10px 30px -19px rgba(0,0,0,0.75);
+                             -moz-box-shadow: 10px 10px 30px -19px rgba(0,0,0,0.75);
+                             box-shadow: 10px 10px 30px -19px rgba(0,0,0,0.75);">
+
+                    <p:row>
+                        <p:column colspan="1" style="background: #009999; color: white; font-size: 22px;">
+                            <p:outputLabel value="Parte final"/>
+                        </p:column>
+
+                    </p:row>
+
+                    
+
+                        
+                    
+                    <p:row style="height: 25px;">
+                        <p:column>
+                            <p:outputLabel value=""/>
+                        </p:column>
+                    </p:row>
+                    
+                    <p:row>
+                        <p:column>
+                            <p:outputLabel>
+                                Autorizo al personal de la guarderia para : Entregar a mi hijo(A) a las personas
+                                registradas en este documento. Tomar las medidas de emeregencias necesarias en caso de
+                                que mi hijo(A) se enferme o sufra algun accidente durante su permanencia en las guarderia.
+                                A que desarrollen con mi hijo(A) las estrategias pedagogicas en beneficio de su desarrollo integral.
+                                
+                            </p:outputLabel>
+                        </p:column>
+                    </p:row>
+                    <p:row style="height: 20px;">
+                        <p:column>
+                            <p:outputLabel value=""/>
+                        </p:column>
+                    </p:row>
+
+                    
+                      <p:row>
+                        <p:column>
+                            <p:outputLabel style="margin-left: 40px; font-size: 21px;" value="Firma del beneficiario " />
+                        </p:column>
+                    </p:row>
+                    <p:row>
+                        <p:column>
+                   
+                            
+                                
+                                
+
+                                <p:signature  style="width:330px;height:140px; margin-left: 250px;"  value=""  />
+
+                                
+
+                                
+                           
+                          
+                        </p:column>
+                        
+                         
+                    </p:row>
+
+
+                    <p:row style="height: 20px;">
+                        <p:column colspan="2">
+                            <p:outputLabel value=""/>
+                        </p:column>
+
+
+                    </p:row>
+                </p:panelGrid>
+
+
+                
             </h:form>
 
         </center>
